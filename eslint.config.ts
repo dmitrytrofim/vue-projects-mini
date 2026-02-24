@@ -20,4 +20,16 @@ export default defineConfigWithVueTs(
   vueTsConfigs.recommended,
 
   ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
+
+  {
+    rules: {
+      'vue/html-indent': ['error', 2],
+      'vue/no-multi-spaces': 'error',
+      'indent': ['error', 2],
+      'no-trailing-spaces': 'error',
+      '@typescript-eslint/no-unused-vars': ['error', {
+        argsIgnorePattern: '^_'
+      }],
+    }
+  }
 )
